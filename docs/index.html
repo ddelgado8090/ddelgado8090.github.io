@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.339">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -47,12 +47,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
   "keyboard-shortcut": [
     "f",
     "/",
     "s"
   ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -61,6 +62,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -117,14 +119,41 @@ background-size: cover;
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
 <link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
@@ -191,27 +220,28 @@ background-size: cover;
 
 
 
+
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1678424400000" data-listing-file-modified-sort="1707492124794" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="441">
+<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1678424400000" data-listing-file-modified-sort="1707785381923" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="441">
 <div class="thumbnail">
-<p><a href="./posts/new-test-post/index.html"> <img src="./posts/new-test-post/image.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/new-test-post/index.html" class="no-external"></a></p><a href="./posts/new-test-post/index.html" class="no-external">
+<p><img src="./posts/new-test-post/image.jpg" class="thumbnail-image"></p>
+</a><p><a href="./posts/new-test-post/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/new-test-post/index.html">
 <h3 class="no-anchor listing-title">
-Second Post
+<a href="./posts/new-test-post/index.html" class="no-external">Second Post</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/new-test-post/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-<p>A new blog post that I just made!</p>
+<a href="./posts/new-test-post/index.html" class="no-external">A new blog post that I just made!</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/new-test-post/index.html">
+<a href="./posts/new-test-post/index.html" class="no-external">
 <div class="listing-date">
 Mar 10, 2023
 </div>
@@ -221,25 +251,25 @@ Phil Chodrow
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1678424400000" data-listing-file-modified-sort="1682019385908" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="441">
+<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1678424400000" data-listing-file-modified-sort="1707785381921" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="441">
 <div class="thumbnail">
-<p><a href="./posts/new-new-test-post/index.html"> <img src="./posts/new-new-test-post/image.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/new-new-test-post/index.html" class="no-external"></a></p><a href="./posts/new-new-test-post/index.html" class="no-external">
+<p><img src="./posts/new-new-test-post/image.jpg" class="thumbnail-image"></p>
+</a><p><a href="./posts/new-new-test-post/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/new-new-test-post/index.html">
 <h3 class="no-anchor listing-title">
-Timnit Gebru
+<a href="./posts/new-new-test-post/index.html" class="no-external">Timnit Gebru</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/new-new-test-post/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-<p>A new blog post that I just made!</p>
+<a href="./posts/new-new-test-post/index.html" class="no-external">A new blog post that I just made!</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/new-new-test-post/index.html">
+<a href="./posts/new-new-test-post/index.html" class="no-external">
 <div class="listing-date">
 Mar 10, 2023
 </div>
@@ -249,25 +279,25 @@ Phil Chodrow
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1673326800000" data-listing-file-modified-sort="1707492150498" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="441">
+<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1673326800000" data-listing-file-modified-sort="1707785381920" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="441">
 <div class="thumbnail">
-<p><a href="./posts/example-blog-post/index.html"> <img src="./posts/example-blog-post/image.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/example-blog-post/index.html" class="no-external"></a></p><a href="./posts/example-blog-post/index.html" class="no-external">
+<p><img src="./posts/example-blog-post/image.jpg" class="thumbnail-image"></p>
+</a><p><a href="./posts/example-blog-post/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/example-blog-post/index.html">
 <h3 class="no-anchor listing-title">
-Hello Blog
+<a href="./posts/example-blog-post/index.html" class="no-external">Hello Blog</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/example-blog-post/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-<p>An example blog post illustrating the key techniques you’ll need to demonstrate your learning in CSCI 0451.</p>
+<a href="./posts/example-blog-post/index.html" class="no-external">An example blog post illustrating the key techniques you’ll need to demonstrate your learning in CSCI 0451.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/example-blog-post/index.html">
+<a href="./posts/example-blog-post/index.html" class="no-external">
 <div class="listing-date">
 Jan 10, 2023
 </div>
@@ -410,15 +440,28 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     stripColumnClz(note)
-    if (id.startsWith('sec-')) {
+    if (id === null || id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
       if (note.children && note.children.length > 2) {
-        for (let i = 0; i < 2; i++) {
-          container.appendChild(note.children[i].cloneNode(true));
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
         }
         return container.innerHTML
       } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
         return note.innerHTML;
       }
     } else {
@@ -427,7 +470,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (anchorLink) {
         anchorLink.remove();
       }
-      return note.innerHTML;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
     }
   }
   for (var i=0; i<xrefs.length; i++) {
@@ -469,6 +520,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             instance.show();
           });
         }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
       }
     }, function(instance) {
     });
@@ -544,7 +618,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     window.addEventListener(
       "resize",
       throttle(() => {
-        console.log("RESIZE");
         elRect = undefined;
         if (selectedAnnoteEl) {
           selectCodeLines(selectedAnnoteEl);

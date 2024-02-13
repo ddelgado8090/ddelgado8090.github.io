@@ -4,9 +4,6 @@ image: profile.jpg
 about:
   template: jolla
   links:
-    - icon: twitter
-      text: Twitter
-      href: https://twitter.com
     - icon: linkedin
       text: LinkedIn
       href: https://linkedin.com
@@ -16,4 +13,8 @@ about:
 
 ---
 
-About this blog
+Daniela Delgado 
+
+Machine Learning: Course Blog Posts
+
+Middlebury College '24
