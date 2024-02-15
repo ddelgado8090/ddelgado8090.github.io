@@ -7,32 +7,11 @@
     "text": "Daniela Delgado\nMachine Learning: Course Blog Posts\nMiddlebury College ’24"
   },
   {
-    "objectID": "posts/new-new-test-post/index.html",
-    "href": "posts/new-new-test-post/index.html",
-    "title": "Timnit Gebru",
+    "objectID": "WarmUp1.html",
+    "href": "WarmUp1.html",
+    "title": "My Awesome CSCI 0451 Blog",
     "section": "",
-    "text": "from source import Perceptron\np = Perceptron()\n\nI did it!!\nnot implemented\nThis is an example of the blog posts that you’ll submit as your primary form of learning demonstration in CSCI 0451. I created this post by modifying the file posts/example-blog-post/index.ipynb in VSCode. You can also use JupyterLab for this editing if you prefer. Finally, it is possible to write blog posts without using notebooks by writing .qmd files, as illustrated here."
-  },
-  {
-    "objectID": "posts/new-new-test-post/index.html#math",
-    "href": "posts/new-new-test-post/index.html#math",
-    "title": "Timnit Gebru",
-    "section": "Math",
-    "text": "Math\nIn addition to regular text using the Markdown specification, you can also write mathematics, enclosed between dollar signs. The syntax for writing math is very similar to the syntax used in the \\(\\LaTeX\\) markup language. For example, $f(x) \\approx y$ renders to \\(f(x) \\approx y\\). To place complex mathematical expressions on their own lines, use double dollar signs. For example, the expression\n$$\\mathcal{L}(a, b) = \\sum_{i = 1}^n (ax_i + b - y_i)^2$$\nrenders to:\n\\[\\mathcal{L}(a, b) = \\sum_{i = 1}^n (ax_i + b - y_i)^2\\;.\\]\nBehind the scenes, math is powered by the MathJax engine. For more on how to write math, check this handy tutorial and quick reference."
-  },
-  {
-    "objectID": "posts/example-blog-post/index.html",
-    "href": "posts/example-blog-post/index.html",
-    "title": "Hello Blog",
-    "section": "",
-    "text": "from source import Perceptron\nThis is an example of the blog posts that you’ll submit as your primary form of learning demonstration in CSCI 0451. I created this post by modifying the file posts/example-blog-post/index.ipynb in VSCode. You can also use JupyterLab for this editing if you prefer. Finally, it is possible to write blog posts without using notebooks by writing .qmd files, as illustrated here."
-  },
-  {
-    "objectID": "posts/example-blog-post/index.html#math",
-    "href": "posts/example-blog-post/index.html#math",
-    "title": "Hello Blog",
-    "section": "Math",
-    "text": "Math\nIn addition to regular text using the Markdown specification, you can also write mathematics, enclosed between dollar signs. The syntax for writing math is very similar to the syntax used in the \\(\\LaTeX\\) markup language. For example, $f(x) \\approx y$ renders to \\(f(x) \\approx y\\). To place complex mathematical expressions on their own lines, use double dollar signs. For example, the expression\n$$\\mathcal{L}(a, b) = \\sum_{i = 1}^n (ax_i + b - y_i)^2$$\nrenders to:\n\\[\\mathcal{L}(a, b) = \\sum_{i = 1}^n (ax_i + b - y_i)^2\\;.\\]\nBehind the scenes, math is powered by the MathJax engine. For more on how to write math, check this handy tutorial and quick reference."
+    "text": "import pandas as pd\nfrom matplotlib import pyplot as plt\nimport seaborn as sns\n\nurl = \"https://raw.githubusercontent.com/PhilChodrow/ml-notes/main/data/palmer-penguins/palmer-penguins.csv\"\ndf = pd.read_csv(url)\n\n#show table\ndf\n\n\n\n\n\n\n\n\nstudyName\nSample Number\nSpecies\nRegion\nIsland\nStage\nIndividual ID\nClutch Completion\nDate Egg\nCulmen Length (mm)\nCulmen Depth (mm)\nFlipper Length (mm)\nBody Mass (g)\nSex\nDelta 15 N (o/oo)\nDelta 13 C (o/oo)\nComments\n\n\n\n\n0\nPAL0708\n1\nAdelie Penguin (Pygoscelis adeliae)\nAnvers\nTorgersen\nAdult, 1 Egg Stage\nN1A1\nYes\n11/11/07\n39.1\n18.7\n181.0\n3750.0\nMALE\nNaN\nNaN\nNot enough blood for isotopes.\n\n\n1\nPAL0708\n2\nAdelie Penguin (Pygoscelis adeliae)\nAnvers\nTorgersen\nAdult, 1 Egg Stage\nN1A2\nYes\n11/11/07\n39.5\n17.4\n186.0\n3800.0\nFEMALE\n8.94956\n-24.69454\nNaN\n\n\n2\nPAL0708\n3\nAdelie Penguin (Pygoscelis adeliae)\nAnvers\nTorgersen\nAdult, 1 Egg Stage\nN2A1\nYes\n11/16/07\n40.3\n18.0\n195.0\n3250.0\nFEMALE\n8.36821\n-25.33302\nNaN\n\n\n3\nPAL0708\n4\nAdelie Penguin (Pygoscelis adeliae)\nAnvers\nTorgersen\nAdult, 1 Egg Stage\nN2A2\nYes\n11/16/07\nNaN\nNaN\nNaN\nNaN\nNaN\nNaN\nNaN\nAdult not sampled.\n\n\n4\nPAL0708\n5\nAdelie Penguin (Pygoscelis adeliae)\nAnvers\nTorgersen\nAdult, 1 Egg Stage\nN3A1\nYes\n11/16/07\n36.7\n19.3\n193.0\n3450.0\nFEMALE\n8.76651\n-25.32426\nNaN\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n339\nPAL0910\n120\nGentoo penguin (Pygoscelis papua)\nAnvers\nBiscoe\nAdult, 1 Egg Stage\nN38A2\nNo\n12/1/09\nNaN\nNaN\nNaN\nNaN\nNaN\nNaN\nNaN\nNaN\n\n\n340\nPAL0910\n121\nGentoo penguin (Pygoscelis papua)\nAnvers\nBiscoe\nAdult, 1 Egg Stage\nN39A1\nYes\n11/22/09\n46.8\n14.3\n215.0\n4850.0\nFEMALE\n8.41151\n-26.13832\nNaN\n\n\n341\nPAL0910\n122\nGentoo penguin (Pygoscelis papua)\nAnvers\nBiscoe\nAdult, 1 Egg Stage\nN39A2\nYes\n11/22/09\n50.4\n15.7\n222.0\n5750.0\nMALE\n8.30166\n-26.04117\nNaN\n\n\n342\nPAL0910\n123\nGentoo penguin (Pygoscelis papua)\nAnvers\nBiscoe\nAdult, 1 Egg Stage\nN43A1\nYes\n11/22/09\n45.2\n14.8\n212.0\n5200.0\nFEMALE\n8.24246\n-26.11969\nNaN\n\n\n343\nPAL0910\n124\nGentoo penguin (Pygoscelis papua)\nAnvers\nBiscoe\nAdult, 1 Egg Stage\nN43A2\nYes\n11/22/09\n49.9\n16.1\n213.0\n5400.0\nMALE\n8.36390\n-26.15531\nNaN\n\n\n\n\n344 rows × 17 columns\n\n\n\n\n#Warm-Up part A\n\n#group dataset based on sex and species to find mean mass\n\nmeanMassTable = df.groupby(['Species', 'Sex']).aggregate({'Body Mass (g)' : 'mean'}) #using dictionary to apply the mean function on the data\nprint(meanMassTable)\n\n                                                  Body Mass (g)\nSpecies                                   Sex                  \nAdelie Penguin (Pygoscelis adeliae)       FEMALE    3368.835616\n                                          MALE      4043.493151\nChinstrap penguin (Pygoscelis antarctica) FEMALE    3527.205882\n                                          MALE      3938.970588\nGentoo penguin (Pygoscelis papua)         .         4875.000000\n                                          FEMALE    4679.741379\n                                          MALE      5484.836066\n\n\n\n#Warm-up part B\n\n#Scatterplot of culmen length against culmen depth (bill dimensions), with the color of each point corresponding to the penguin species\n\n#creating scatterplot \nsns.scatterplot(data = df, x = 'Culmen Length (mm)', y = 'Culmen Depth (mm)', hue = 'Species')\n\n#labeling plot\nplt.title('Culmen Length vs. Culmen Depth Based on Penguin Species')\nplt.show()"
   },
   {
     "objectID": "posts/new-test-post/index.html",
@@ -49,10 +28,38 @@
     "text": "Math\nIn addition to regular text using the Markdown specification, you can also write mathematics, enclosed between dollar signs. The syntax for writing math is very similar to the syntax used in the \\(\\LaTeX\\) markup language. For example, $f(x) \\approx y$ renders to \\(f(x) \\approx y\\). To place complex mathematical expressions on their own lines, use double dollar signs. For example, the expression\n$$\\mathcal{L}(a, b) = \\sum_{i = 1}^n (ax_i + b - y_i)^2$$\nrenders to:\n\\[\\mathcal{L}(a, b) = \\sum_{i = 1}^n (ax_i + b - y_i)^2\\;.\\]\nBehind the scenes, math is powered by the MathJax engine. For more on how to write math, check this handy tutorial and quick reference."
   },
   {
+    "objectID": "posts/example-blog-post/index.html",
+    "href": "posts/example-blog-post/index.html",
+    "title": "Hello Blog",
+    "section": "",
+    "text": "from source import Perceptron\nHello World !\nThis is an example of the blog posts that you’ll submit as your primary form of learning demonstration in CSCI 0451. I created this post by modifying the file posts/example-blog-post/index.ipynb in VSCode. You can also use JupyterLab for this editing if you prefer. Finally, it is possible to write blog posts without using notebooks by writing .qmd files, as illustrated here."
+  },
+  {
+    "objectID": "posts/example-blog-post/index.html#math",
+    "href": "posts/example-blog-post/index.html#math",
+    "title": "Hello Blog",
+    "section": "Math",
+    "text": "Math\nIn addition to regular text using the Markdown specification, you can also write mathematics, enclosed between dollar signs. The syntax for writing math is very similar to the syntax used in the \\(\\LaTeX\\) markup language. For example, $f(x) \\approx y$ renders to \\(f(x) \\approx y\\). To place complex mathematical expressions on their own lines, use double dollar signs. For example, the expression\n$$\\mathcal{L}(a, b) = \\sum_{i = 1}^n (ax_i + b - y_i)^2$$\nrenders to:\n\\[\\mathcal{L}(a, b) = \\sum_{i = 1}^n (ax_i + b - y_i)^2\\;.\\]\nBehind the scenes, math is powered by the MathJax engine. For more on how to write math, check this handy tutorial and quick reference."
+  },
+  {
+    "objectID": "posts/new-new-test-post/index.html",
+    "href": "posts/new-new-test-post/index.html",
+    "title": "Timnit Gebru",
+    "section": "",
+    "text": "from source import Perceptron\np = Perceptron()\n\nI did it!!\nnot implemented\nThis is an example of the blog posts that you’ll submit as your primary form of learning demonstration in CSCI 0451. I created this post by modifying the file posts/example-blog-post/index.ipynb in VSCode. You can also use JupyterLab for this editing if you prefer. Finally, it is possible to write blog posts without using notebooks by writing .qmd files, as illustrated here."
+  },
+  {
+    "objectID": "posts/new-new-test-post/index.html#math",
+    "href": "posts/new-new-test-post/index.html#math",
+    "title": "Timnit Gebru",
+    "section": "Math",
+    "text": "Math\nIn addition to regular text using the Markdown specification, you can also write mathematics, enclosed between dollar signs. The syntax for writing math is very similar to the syntax used in the \\(\\LaTeX\\) markup language. For example, $f(x) \\approx y$ renders to \\(f(x) \\approx y\\). To place complex mathematical expressions on their own lines, use double dollar signs. For example, the expression\n$$\\mathcal{L}(a, b) = \\sum_{i = 1}^n (ax_i + b - y_i)^2$$\nrenders to:\n\\[\\mathcal{L}(a, b) = \\sum_{i = 1}^n (ax_i + b - y_i)^2\\;.\\]\nBehind the scenes, math is powered by the MathJax engine. For more on how to write math, check this handy tutorial and quick reference."
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "My Awesome CSCI 0451 Blog",
     "section": "",
-    "text": "Second Post\n\n\n\n\n\nA new blog post that I just made!\n\n\n\n\n\nMar 10, 2023\n\n\nPhil Chodrow\n\n\n\n\n\n\n\n\n\n\n\n\nTimnit Gebru\n\n\n\n\n\nA new blog post that I just made!\n\n\n\n\n\nMar 10, 2023\n\n\nPhil Chodrow\n\n\n\n\n\n\n\n\n\n\n\n\nHello Blog\n\n\n\n\n\nAn example blog post illustrating the key techniques you’ll need to demonstrate your learning in CSCI 0451.\n\n\n\n\n\nJan 10, 2023\n\n\nPhil Chodrow\n\n\n\n\n\n\nNo matching items"
+    "text": "Second Post\n\n\n\n\n\nA new blog post that I just made!\n\n\n\n\n\nMar 10, 2023\n\n\nPhil Chodrow\n\n\n\n\n\n\n\n\n\n\n\n\nTimnit Gebru\n\n\n\n\n\nA new blog post that I just made!\n\n\n\n\n\nMar 10, 2023\n\n\nPhil Chodrow\n\n\n\n\n\n\n\n\n\n\n\n\nHello Blog\n\n\n\n\n\nAn example blog post illustrating the key techniques you’ll need to demonstrate your learning in CSCI 0451.\n\n\n\n\n\nJan 10, 2023\n\n\nPhil Chodrow with one edit made by Daniela\n\n\n\n\n\n\nNo matching items"
   }
 ]
