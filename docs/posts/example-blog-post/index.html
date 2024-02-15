@@ -10,7 +10,7 @@
 <meta name="dcterms.date" content="2023-01-10">
 <meta name="description" content="An example blog post illustrating the key techniques you’ll need to demonstrate your learning in CSCI 0451.">
 
-<title>My Awesome CSCI 0451 Blog - Hello Blog</title>
+<title>Daniela’s CSCI 0451 Blog - Hello Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -163,7 +163,7 @@ window.Quarto = {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">My Awesome CSCI 0451 Blog</span>
+    <span class="navbar-title">Daniela’s CSCI 0451 Blog</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -260,7 +260,21 @@ Figure&nbsp;2: xkcd comic
 </div>
 <p><a href="#fig-earth" class="quarto-xref">Figure&nbsp;1</a> is an image of the Earth.</p>
 <p><a href="#fig-comic" class="quarto-xref">Figure&nbsp;2</a> is a comic by <a href="https://xkcd.com/2861/">Randall Munroe</a>.</p>
-<div id="cell-2" class="cell" data-execution_count="1">
+<p><span class="math display">\[ F = ma \]</span></p>
+<p><span class="math display">\[
+f(x) = \frac{1}{\sigma \sqrt{2\pi} }
+e^{-\frac{1}{2}
+\left(\frac{x-\mu}{\sigma}\right)^2
+}
+\]</span></p>
+<p>Aligning with LaTex <span class="math display">\[
+\begin{align*}
+x&amp;=y           &amp;  w &amp;=z              &amp;  a&amp;=b+c\\
+2x&amp;=-y         &amp;  3w&amp;=\frac{1}{2}z   &amp;  a&amp;=b\\
+-4 + 5x&amp;=2+y   &amp;  w+2&amp;=-1+w          &amp;  ab&amp;=cb
+\end{align*}
+\]</span></p>
+<div id="cell-4" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> source <span class="im">import</span> Perceptron</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Hello World !</p>
@@ -281,14 +295,14 @@ format: html
 <section id="running-python-code" class="level1">
 <h1>Running Python Code</h1>
 <p>To run Python code, place your code in a Python code block inside your notebook. You can run the code block inside VSCode (or JupyterLab) using the keyboard shortcut <code>ctrl + Enter</code>. You’ll see the result of your computation below the code, including the value of the most recent statement.</p>
-<div id="cell-5" class="cell" data-execution_count="1">
+<div id="cell-7" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">"CSCI"</span> <span class="op">+</span> <span class="st">" 0451"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="1">
 <pre><code>'CSCI 0451'</code></pre>
 </div>
 </div>
 <p>We’ll have lots of opportunities to make data visualizations in this course. These also display inside the notebook, and get converted into your blog post:</p>
-<div id="cell-7" class="cell" data-execution_count="2">
+<div id="cell-9" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plt</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -307,7 +321,7 @@ format: html
 </div>
 </div>
 <p>Another thing we’ll often do is implement an algorithm in a source file (i.e.&nbsp;a <code>.py</code> file) and then <em>use</em> it in a notebook. To do this, just place the <code>.py</code> file in the same directory as the notebook. For example, the file <code>source.py</code> in the same directory contains a custom function (which prints a message). I can use like this:</p>
-<div id="cell-9" class="cell" data-execution_count="1">
+<div id="cell-11" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> source </span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>source.my_custom_function()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
