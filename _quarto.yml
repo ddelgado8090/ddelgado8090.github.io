@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "My Awesome CSCI 0451 Blog"
+  title: "Daniela's CSCI 0451 Blog"
   navbar:
     background: "#112a39"
     right:
