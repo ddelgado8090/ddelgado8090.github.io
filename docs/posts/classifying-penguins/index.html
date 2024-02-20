@@ -231,7 +231,6 @@ background-size: cover;
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">Unnamed: 0</th>
 <th data-quarto-table-cell-role="th">studyName</th>
 <th data-quarto-table-cell-role="th">Sample Number</th>
 <th data-quarto-table-cell-role="th">Species</th>
@@ -254,7 +253,6 @@ background-size: cover;
 <tbody>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">0</td>
-<td>182</td>
 <td>PAL0809</td>
 <td>31</td>
 <td>Chinstrap penguin (Pygoscelis antarctica)</td>
@@ -275,7 +273,6 @@ background-size: cover;
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">1</td>
-<td>192</td>
 <td>PAL0809</td>
 <td>41</td>
 <td>Chinstrap penguin (Pygoscelis antarctica)</td>
@@ -296,7 +293,6 @@ background-size: cover;
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">2</td>
-<td>223</td>
 <td>PAL0708</td>
 <td>4</td>
 <td>Gentoo penguin (Pygoscelis papua)</td>
@@ -317,7 +313,6 @@ background-size: cover;
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">3</td>
-<td>234</td>
 <td>PAL0708</td>
 <td>15</td>
 <td>Gentoo penguin (Pygoscelis papua)</td>
@@ -338,7 +333,6 @@ background-size: cover;
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">4</td>
-<td>185</td>
 <td>PAL0809</td>
 <td>34</td>
 <td>Chinstrap penguin (Pygoscelis antarctica)</td>
@@ -397,7 +391,6 @@ background-size: cover;
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">Unnamed: 0</th>
 <th data-quarto-table-cell-role="th">Culmen Length (mm)</th>
 <th data-quarto-table-cell-role="th">Culmen Depth (mm)</th>
 <th data-quarto-table-cell-role="th">Flipper Length (mm)</th>
@@ -417,7 +410,6 @@ background-size: cover;
 <tbody>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">0</td>
-<td>182</td>
 <td>40.9</td>
 <td>16.6</td>
 <td>187.0</td>
@@ -435,7 +427,6 @@ background-size: cover;
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">1</td>
-<td>192</td>
 <td>49.0</td>
 <td>19.5</td>
 <td>210.0</td>
@@ -453,7 +444,6 @@ background-size: cover;
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">2</td>
-<td>223</td>
 <td>50.0</td>
 <td>15.2</td>
 <td>218.0</td>
@@ -471,7 +461,6 @@ background-size: cover;
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">3</td>
-<td>234</td>
 <td>45.8</td>
 <td>14.6</td>
 <td>210.0</td>
@@ -489,7 +478,6 @@ background-size: cover;
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">4</td>
-<td>185</td>
 <td>51.0</td>
 <td>18.8</td>
 <td>203.0</td>
@@ -728,11 +716,8 @@ background-size: cover;
 <span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Best Score: '</span>, score_counter)</span>
 <span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Best Three Columns: '</span>, col_best)</span>
 <span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> warnings.catch_warnings():</span>
-<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a>    warnings.simplefilter(<span class="st">"ignore"</span>)</span>
-<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a><span class="co">#using max_iter = 1000 or ignore the warning</span></span>
-<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a><span class="co">#google how to supress python warning</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a><span class="co">#using max_iter = 1000 or ignore the warning</span></span>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a><span class="co">#google how to supress python warning</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>['Culmen Length (mm)', 'Culmen Depth (mm)', 'Clutch Completion_No', 'Clutch Completion_Yes']
 ['Culmen Length (mm)', 'Flipper Length (mm)', 'Clutch Completion_No', 'Clutch Completion_Yes']
@@ -1542,8 +1527,8 @@ Please also refer to the documentation for alternative solver options:
 ['Culmen Depth (mm)', 'Flipper Length (mm)', 'Stage_Adult, 1 Egg Stage']
 ['Culmen Depth (mm)', 'Body Mass (g)', 'Stage_Adult, 1 Egg Stage']
 ['Flipper Length (mm)', 'Body Mass (g)', 'Stage_Adult, 1 Egg Stage']
-Best Score:  0.9765460030165913
-Best Three Columns:  ['Culmen Length (mm)', 'Culmen Depth (mm)', 'Sex_FEMALE', 'Sex_MALE']
+Best Score:  0.9804675716440421
+Best Three Columns:  ['Culmen Length (mm)', 'Flipper Length (mm)', 'Island_Biscoe', 'Island_Dream', 'Island_Torgersen']
 At depth:  19</code></pre>
 </div>
 </div>
@@ -1567,7 +1552,7 @@ At depth:  19</code></pre>
 <span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>X_test, y_test <span class="op">=</span> prepare_data(test)</span>
 <span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>DTC.score(X_test[cols], y_test)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="14">
-<pre><code>0.9852941176470589</code></pre>
+<pre><code>0.9705882352941176</code></pre>
 </div>
 </div>
 <p>Now we are going to plot a panel of decision regions for the classifiers:</p>
@@ -1640,7 +1625,7 @@ At depth:  19</code></pre>
 </div>
 </div>
 <p>Finally, we will show a confusion matrix on the DTC model, which will be evaluated on the test set.</p>
-<div id="cell-30" class="cell" data-execution_count="19">
+<div id="cell-30" class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> confusion_matrix</span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>actual <span class="op">=</span> y_test</span>
@@ -1650,9 +1635,9 @@ At depth:  19</code></pre>
 <span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(conf_matrix)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[[31  0  0]
- [ 0 10  1]
- [ 0  0 26]]</code></pre>
+<pre><code>[[30  1  0]
+ [ 0 11  0]
+ [ 1  0 25]]</code></pre>
 </div>
 </div>
 <p>In this confusion matrix, we see the error is low, but it is seen with the Gentoo and Chinstrap penguins. The data predicted one penguin to be Chinstrap when it was actually a Gentoo penguin. With this information, I do not believe there was an error greater than others as that seems to be the only error.</p>
