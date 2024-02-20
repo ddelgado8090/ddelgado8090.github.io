@@ -2,8 +2,8 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/classifying-penguins/index.html",
       "/posts/new-test-post/index.html",
-      "/posts/new_post/index.html",
       "/posts/new-new-test-post/index.html",
       "/posts/example-blog-post/index.html"
     ]
