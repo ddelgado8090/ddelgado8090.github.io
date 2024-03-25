@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Daniela’s CSCI 0451 Blog</title>
+<title>Daniela’s CSCI 0451 Blog - CSCI 0451: Reflective Goal-Setting</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,59 +20,25 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -114,42 +80,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
       .quarto-title-block .quarto-title-banner {
         color: white;
-background-image: url(img/landscape.png);
+background-image: url(../../img/landscape.png);
 background-size: cover;
       }
 </style>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed fullcontent">
@@ -159,7 +96,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Daniela’s CSCI 0451 Blog</span>
     </a>
   </div>
@@ -170,7 +107,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -191,7 +128,23 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">CSCI 0451: Reflective Goal-Setting</h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
@@ -201,103 +154,46 @@ window.Quarto = {
 
 
 
-<p><strong>Graphing Decision Boundaries</strong></p>
-<p>Part A:</p>
-<p>We use the dot product equation <span class="math inline">\(w_i x_i + w_j x_j = b\)</span> and substitute the values for w and b: <span class="math display">\[(1) * x_i + -\dfrac 1 2 * x_j = \dfrac 1 2\]</span> We make the equation into <span class="math inline">\(y = mx + b\)</span> to plot it: <span class="math display">\[ x_j = 2 * x_i - 1\]</span></p>
-<div id="cell-2" class="cell" data-execution_count="39">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">#making range for x</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>x_vals <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">5</span>, <span class="dv">10</span>, num <span class="op">=</span> <span class="dv">10</span>)</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">#solving for x2</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>x2_vals <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> x_vals <span class="op">-</span> <span class="dv">1</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>plt.plot(x_vals, x2_vals, color <span class="op">=</span> <span class="st">'pink'</span>)</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>plt.xlabel <span class="op">=</span> (<span class="st">'x1'</span>)</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>plt.ylabel <span class="op">=</span> (<span class="st">'x2'</span>)</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>plt.title <span class="op">=</span> (<span class="st">"Graph of 1(x1) + (-1/2)x2 = 1/2"</span>)</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>plt.grid (<span class="va">True</span>, linestyle <span class="op">=</span> <span class="st">'--'</span>)</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="WarmUp2_files/figure-html/cell-2-output-1.png" class="img-fluid figure-img"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Part B:</p>
-<p>Write a quick Python function called linear_classify(x, w, b). w and x should both be 1d numpy arrays of the same length, and b should be a scalar. The function np.dot(x, w) will compute the inner product of x and w. Argument b should be a scalar number. Your function should return 0 if dot product of w and x &lt; b and 1 if the dot product of w and x &gt;= b.</p>
-<div id="cell-4" class="cell" data-execution_count="28">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> linear_classify(x, w, b):</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>  np.dot(w, x) <span class="op">&lt;</span> b: </span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="dv">0</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> (w<span class="op">@</span>x) <span class="op">&gt;=</span> b: </span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="dv">1</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co">#testing</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="co">#should return 1 since dot prod &gt; b</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>w <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>])</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.array([<span class="dv">2</span>, <span class="dv">6</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">0</span>])</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">3</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="co">#should return 0 since dot prod &lt; b</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>w1 <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>])</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>x1 <span class="op">=</span> np.array([<span class="dv">2</span>, <span class="dv">6</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">0</span>])</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>b1 <span class="op">=</span> <span class="dv">30</span></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>w2 <span class="op">=</span> np.array([<span class="dv">2</span>, <span class="op">-</span><span class="dv">10</span>, <span class="op">-</span><span class="dv">5</span>])</span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>x2 <span class="op">=</span> np.array([<span class="dv">2</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">0</span>])</span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>b2 <span class="op">=</span> <span class="dv">10</span></span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>testing <span class="op">=</span> linear_classify(w, x, b)</span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>testing2 <span class="op">=</span> linear_classify(w1, x1, b1)</span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>testing3 <span class="op">=</span> linear_classify(w2, x2, b2)</span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Test 1: '</span>, testing)</span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Test 2: '</span>, testing2)</span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Test 2: '</span>, testing3)</span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Test 1:  1
-Test 2:  0
-Test 2:  1</code></pre>
-</div>
-</div>
-<p>Part C:</p>
-<p>Make a sketch of the curve in the nonnegative quadrant defined by the equation given.</p>
-<div id="cell-6" class="cell" data-execution_count="41">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co">#making range for x</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>x_vals <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">10</span>)</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>x1_val <span class="op">=</span> np.sqrt(<span class="dv">1</span> <span class="op">-</span> <span class="dv">1</span><span class="op">/</span><span class="dv">4</span> <span class="op">*</span> (x_vals<span class="op">**</span><span class="dv">2</span>))</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>plt.plot(x_vals, x1_val, color <span class="op">=</span> <span class="st">'pink'</span>)</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>plt.xlabel <span class="op">=</span> (<span class="st">'x'</span>)</span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>plt.ylabel <span class="op">=</span> (<span class="st">'x1'</span>)</span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>plt.title <span class="op">=</span> (<span class="st">'Curve in Nonnegative Quadrant'</span>)</span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>plt.grid (<span class="va">True</span>, linestyle <span class="op">=</span> <span class="st">'--'</span>)</span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>/var/folders/33/b3h8vrcd0ss7_3q4gmmnscl80000gn/T/ipykernel_2446/4100891223.py:6: RuntimeWarning: invalid value encountered in sqrt
-  x1_val = np.sqrt(1 - 1/4 * (x_vals**2))</code></pre>
-</div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="WarmUp2_files/figure-html/cell-4-output-2.png" class="img-fluid figure-img"></p>
-</figure>
-</div>
-</div>
-</div>
+
+<section id="csci-0451-reflective-goal-setting" class="level1">
+<h1>CSCI 0451: Reflective Goal-Setting</h1>
+<p>Daniela Delgado</p>
+<section id="what-youll-learn" class="level2">
+<h2 class="anchored" data-anchor-id="what-youll-learn">What You’ll Learn</h2>
+<p><em>The knowledge we’ll develop in CSCI 0451 can be broadly divided into four main areas:</em></p>
+<ul>
+<li><strong><em>Theory</em></strong>: <em>mathematical descriptions of frameworks and algorithms.</em></li>
+<li><strong><em>Implementation</em></strong>: <em>effective coding and use of tools in order to implement efficient machine learning algorithms.</em></li>
+<li><strong><em>Experimentation</em></strong>: <em>performing experiments to assess the performance of algorithms and clearly communicating about the results.</em></li>
+<li><strong><em>Social responsibility</em></strong>: <em>critical analysis of sources of bias and harm in machine learning algorithms; theoretical formulations of fairness and bias</em></li>
+</ul>
+<p><em>Every student should grow toward each of these areas, but you can choose to specialize if you’d like! If there are one or two of these categories on which you’d especially like to focus, list them below. Feel free to include any details that you’d like – this can help me tailor the course content to your interests.</em></p>
+<p>I would really like to grow in the implementation and social responsibility areas as these are where my interests lie. I want to understand machine learning algorithms and be able to compare algorithms to know which ones work better for certain tasks. Additionally, even with this great technology, it falls in our hands to be able to go against biases and for these models to be ethical. As a POC woman in STEM, I am aware of the discrimination, stereotypes, and limitations women and people of color face in the field. Thus, I would like to understand where the faults lie in machine learning and be able to learn and think about ways to eliminate/improve the biases to avoid them growing through and because of technology.</p>
+</section>
+<section id="what-youll-achieve" class="level2">
+<h2 class="anchored" data-anchor-id="what-youll-achieve">What You’ll Achieve</h2>
+<section id="blog-posts" class="level3">
+<h3 class="anchored" data-anchor-id="blog-posts">Blog Posts</h3>
+<p><em>Most blog posts will require around 5-8 hours on average to complete, plus time for revisions in response to feedback. Blog posts will most frequently involve a mix of mathematical problem-solving, coding, experimentation, and written discussion. Some blog posts will ask you to critically discuss recent readings in an essay-like format.</em></p>
+<p>For the blog posts, I want to achieve at least five “No Revisions Suggested” posts and at least one post for each of the sections, except at least two for “Implementation” and “Social Responsibility” as these are the topics that most interest me.</p>
+</section>
+<section id="course-presence-participation" class="level3">
+<h3 class="anchored" data-anchor-id="course-presence-participation">Course Presence (Participation)</h3>
+<p><em>You make a choice each day about how to show up for class: whether you’ll be prepared, whether you’ll engage with me and your peers in a constructive manner; and whether you’ll be active during lecture and discussions. We will also have a special opportunity this semester to engage with a renowned expert in machine learning, algorithmic bias, and the ethics of artificial intelligence.</em></p>
+<p><em>An especially important form of course presence is the daily warmup. We’ll spend the first 10-15 minutes of most class periods on warmup activities. You’re expected to have prepared the warmup activity ahead of time (this means you’ll need to have completed the readings as well). Each time, we’ll sort into groups of 5-6 students, and one of you (randomly selected) will be responsible for presenting the activity on the whiteboard. If you’re not feeling prepared to present the activity, you can “pass” to the next person, or ask for help along the way.</em></p>
+<p>I would like to use the “pass” option at most two times during the semester when it is my turn to present. Additionally, I would like to ask questions to whoever is presenting the warmup when I need more clarification, which might be often. I often struggle to ask questions out loud, so I hope this creates an added incentive for me to ask others for clarifying help. I will also attend student/peer help hours at least twice a week to ask clarifying/curious questions over the material. If there is a study group, I would like to attend a session (once a week at least if it is helpful the first time). I will complete all core readings prior to each class periods and take notes on them.</p>
+</section>
+<section id="project" class="level3">
+<h3 class="anchored" data-anchor-id="project">Project</h3>
+<p><em>To finish off the course, you’ll complete a long-term project that showcases your interests and skills. You’ll be free to propose and pursue a topic. My expectation is that most projects will move significantly beyond the content covered in class in some way: you might implement a new algorithm, study a complex data set in depth, or conduct a series of experiments related to assessing algorithmic bias in a certain class of algorithm. You’ll be expected to complete this project in small groups (of your choosing), and update us at a few milestones along the way.</em></p>
+<p><em>Please share a bit about what kind of topic might excite you, and set a few goals about how you plan to show up as a constructive team-member and co-inquirer (see the <a href="ideas.qmd">ideas</a> for some inspiration</em>).</p>
+<p>I will submit all of the project milestones on time. Additionally, when working in the group, we will set a regular time each week, multiple times a week as needed, to work with the group on the project. I will also communicate with my group in a clear and timely manner. I will write the sections assigned to me for the project report and present the portion assigned to me for the final presentation.</p>
+<p>The topics I would like to explore in a project would be making predictions, classifying music or items, or a recognition projection (such as music or emotions or an image recognition).</p>
 
 
+</section>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

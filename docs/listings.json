@@ -2,8 +2,10 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/goals-setting/goal-setting.html",
       "/posts/classifying-penguins/index.html",
-      "/posts/new-test-post/index.html",
+      "/posts/optimal-decision-making/index.html",
+      "/posts/women-in-DS/index.html",
       "/posts/new-new-test-post/index.html",
       "/posts/example-blog-post/index.html"
     ]

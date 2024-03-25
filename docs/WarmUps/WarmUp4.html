@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Daniela’s CSCI 0451 Blog - My Awesome CSCI 0451 Blog</title>
+<title>Daniela’s CSCI 0451 Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +23,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,35 +66,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <style>
 
       .quarto-title-block .quarto-title-banner h1,
@@ -111,52 +80,23 @@ ul.task-list li input[type="checkbox"] {
 
       .quarto-title-block .quarto-title-banner {
         color: white;
-background-image: url(img/landscape.png);
+background-image: url(../img/landscape.png);
 background-size: cover;
       }
 </style>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Daniela’s CSCI 0451 Blog</span>
     </a>
   </div>
@@ -167,7 +107,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -188,208 +128,24 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">My Awesome CSCI 0451 Blog</h1>
-                      </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta column-page-left">
-
-      
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(6)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
+<p>When was a time in your life in which you felt that you were the subject of an unfair decision? What was it about that decision that made it feel unfair, rather than just bad, disappointing, or surprising?</p>
+<pre><code>- A decision that was made unfairly was that when I was bout 6 or 7, my family was going to watch the Astros play in the stadium, but then my sister and I got into an argument. We were fighting and calling each other names, but in my defense, she started it. As a consequence, my parents cancelled the plans they made. It was unfair because I also got in trouble for something I was only defending myself in and it was disappointing because we loved going to baseball games and that was always a fun time for everyone. I also was sad I missed out on getting an ice cream hat. </code></pre>
+<p>Consider Figure 4 in the Introduction of BHN. In this figure, there are blue dots and green dots, where the colors correspond to hypothetical demographic attributes. We as the reader can choose what the colors mean.</p>
+<p>Suggest one possible meaning for the blue and green dots in which you would say that the classifier depicted in the figure is unproblematic from the perspective of fairness. - Previous experience or not Suggest one possible meaning for the blue and green dots in which you would say that the classifier depicted in the figure is concerning from the perspective of fairness. - Sex: Male or female - This is concerning because there would be an unequal amount of sexes being accepted into colleges. It is also unfair to compare based on sex. What is the relevant difference between the two cases? - The difference between both is that one looks at something that would not apply to the job and you can’t control, while with having experience or not, that applies to the job and it is something you can improve.</p>
 
 
 
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1708981066387" data-listing-reading-time-sort="5" data-listing-word-count-sort="874">
-<div class="thumbnail">
-<p><a href="./posts/goals-setting/goal-setting.html" class="no-external"></a></p><a href="./posts/goals-setting/goal-setting.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/goals-setting/goal-setting.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/goals-setting/goal-setting.html" class="no-external">CSCI 0451: Reflective Goal-Setting</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/goals-setting/goal-setting.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./posts/goals-setting/goal-setting.html" class="no-external">Daniela Delgado</a>
-</div>
-</div>
-<div class="metadata">
-<p><a href="./posts/goals-setting/goal-setting.html" class="no-external"></a></p><a href="./posts/goals-setting/goal-setting.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1708405200000" data-listing-file-modified-sort="1708471292681" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1278">
-<div class="thumbnail">
-<p><a href="./posts/classifying-penguins/index.html" class="no-external"></a></p><a href="./posts/classifying-penguins/index.html" class="no-external">
-<p><img src="./posts/classifying-penguins/penguins.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/classifying-penguins/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/classifying-penguins/index.html" class="no-external">Classifying Palmer Penguins Post</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/classifying-penguins/index.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./posts/classifying-penguins/index.html" class="no-external">Training data to accurately classify penguins using LogisticRegression and DecisionTreeClassifier models!</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/classifying-penguins/index.html" class="no-external">
-<div class="listing-date">
-Feb 20, 2024
-</div>
-<div class="listing-author">
-Daniela Delgado
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1708405200000" data-listing-file-modified-sort="1711389689937" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="856">
-<div class="thumbnail">
-<p><a href="./posts/optimal-decision-making/index.html" class="no-external"></a></p><a href="./posts/optimal-decision-making/index.html" class="no-external">
-<p><img src="./posts/optimal-decision-making/image.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/optimal-decision-making/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/optimal-decision-making/index.html" class="no-external">Optimal Decision Making</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/optimal-decision-making/index.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./posts/optimal-decision-making/index.html" class="no-external">Training data to predict if a person will default on a loan by finding a threshold using a LogisticRegression model!</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/optimal-decision-making/index.html" class="no-external">
-<div class="listing-date">
-Feb 20, 2024
-</div>
-<div class="listing-author">
-Daniela Delgado
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-listing-date-sort="1678424400000" data-listing-file-modified-sort="1707785381923" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="441">
-<div class="thumbnail">
-<p><a href="./posts/women-in-DS/index.html" class="no-external"></a></p><a href="./posts/women-in-DS/index.html" class="no-external">
-<p><img src="./posts/women-in-DS/image.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/women-in-DS/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/women-in-DS/index.html" class="no-external">Second Post</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/women-in-DS/index.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./posts/women-in-DS/index.html" class="no-external">A new blog post that I just made!</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/women-in-DS/index.html" class="no-external">
-<div class="listing-date">
-Mar 10, 2023
-</div>
-<div class="listing-author">
-Phil Chodrow
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-listing-date-sort="1678424400000" data-listing-file-modified-sort="1707785381921" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="441">
-<div class="thumbnail">
-<p><a href="./posts/new-new-test-post/index.html" class="no-external"></a></p><a href="./posts/new-new-test-post/index.html" class="no-external">
-<p><img src="./posts/new-new-test-post/image.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/new-new-test-post/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/new-new-test-post/index.html" class="no-external">Timnit Gebru</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/new-new-test-post/index.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./posts/new-new-test-post/index.html" class="no-external">A new blog post that I just made!</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/new-new-test-post/index.html" class="no-external">
-<div class="listing-date">
-Mar 10, 2023
-</div>
-<div class="listing-author">
-Phil Chodrow
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-listing-date-sort="1673326800000" data-listing-file-modified-sort="1707961995469" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="536">
-<div class="thumbnail">
-<p><a href="./posts/example-blog-post/index.html" class="no-external"></a></p><a href="./posts/example-blog-post/index.html" class="no-external">
-<p><img src="./posts/example-blog-post/image.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/example-blog-post/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/example-blog-post/index.html" class="no-external">Hello Blog</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/example-blog-post/index.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./posts/example-blog-post/index.html" class="no-external">An example blog post illustrating the key techniques you’ll need to demonstrate your learning in CSCI 0451.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/example-blog-post/index.html" class="no-external">
-<div class="listing-date">
-Jan 10, 2023
-</div>
-<div class="listing-author">
-Phil Chodrow with one edit made by Daniela
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
