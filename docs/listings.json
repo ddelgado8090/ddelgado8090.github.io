@@ -3,8 +3,8 @@
     "listing": "/index.html",
     "items": [
       "/posts/optimal-decision-making/index.html",
-      "/posts/classifying-penguins/index.html",
       "/posts/women-in-DS/index.html",
+      "/posts/classifying-penguins/index.html",
       "/posts/new-new-test-post/index.html",
       "/posts/example-blog-post/index.html"
     ]
