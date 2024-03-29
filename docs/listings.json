@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/mid-course.html",
       "/posts/optimal-decision-making/index.html",
       "/posts/women-in-DS/index.html",
       "/posts/classifying-penguins/index.html",
