@@ -238,7 +238,10 @@ window.Quarto = {
 
 
 
-<p>Logistic Regression implementation logistic.py file: https://github.com/ddelgado8090/ddelgado8090.github.io/blob/main/posts/logistic_regression_optimization/logistic.py</p>
+<section id="logistic-regression-implementation" class="level3">
+<h3 class="anchored" data-anchor-id="logistic-regression-implementation">Logistic Regression implementation</h3>
+<p><a href="https://github.com/ddelgado8090/ddelgado8090.github.io/blob/main/posts/logistic_regression_optimization/logistic.py">logistic.py file</a></p>
+</section>
 <section id="abstract" class="level1">
 <h1>Abstract</h1>
 <p>In this blog post, I implement logistic regression from scratch. Then, through experiments such as Vanilla Gradient Descent, Gradient Descent with Momentum (also know as Spicy Gradient Descent), and Overfitting the model, I was able to test the implementation and see the different ways the loss over iterations as well as the accuracy changed at each experiment. In the Vanilla Gradient Descent experiment, I noticed the model did do what it was supposed to do, which was to show the loss decreasing monotonically to a low loss rate over a few thousand iterations. When I tested the Spicy Gradient Descent, the results were similar to the Vanilla Gradient Descent in terms of the graph showing the loss decreasing monotonically, except it reached a faster convergence, meaning it took less iterations to reach the loss rate that Vanilla Gradient Descent reached, and it achieved a smaller loss rate as it will be seen in the plotted graph where I compare the two gradient descent models. Finally, in experimenting with overfitting, I was able to see the importance of avoiding overfitting on the training data as achieving 100% accuracy on the training model through memorization does not mean the testing data will follow the same pattern. In this blog post, I took away how to implement Logistic Regression and the best ways to use and apply it.</p>
