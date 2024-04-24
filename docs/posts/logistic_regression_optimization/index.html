@@ -238,10 +238,11 @@ window.Quarto = {
 
 
 
+<p>Logistic Regression implementation logistic.py file: https://github.com/ddelgado8090/ddelgado8090.github.io/blob/main/posts/logistic_regression_optimization/logistic.py</p>
 <section id="abstract" class="level1">
 <h1>Abstract</h1>
 <p>In this blog post, I implement logistic regression from scratch. Then, through experiments such as Vanilla Gradient Descent, Gradient Descent with Momentum (also know as Spicy Gradient Descent), and Overfitting the model, I was able to test the implementation and see the different ways the loss over iterations as well as the accuracy changed at each experiment. In the Vanilla Gradient Descent experiment, I noticed the model did do what it was supposed to do, which was to show the loss decreasing monotonically to a low loss rate over a few thousand iterations. When I tested the Spicy Gradient Descent, the results were similar to the Vanilla Gradient Descent in terms of the graph showing the loss decreasing monotonically, except it reached a faster convergence, meaning it took less iterations to reach the loss rate that Vanilla Gradient Descent reached, and it achieved a smaller loss rate as it will be seen in the plotted graph where I compare the two gradient descent models. Finally, in experimenting with overfitting, I was able to see the importance of avoiding overfitting on the training data as achieving 100% accuracy on the training model through memorization does not mean the testing data will follow the same pattern. In this blog post, I took away how to implement Logistic Regression and the best ways to use and apply it.</p>
-<div id="cell-3" class="cell" data-execution_count="150">
+<div id="cell-4" class="cell" data-execution_count="150">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>load_ext autoreload</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>autoreload <span class="dv">2</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> logistic <span class="im">import</span> LogisticRegression , GradientDescentOptimizer</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -256,7 +257,7 @@ window.Quarto = {
 <h3 class="anchored" data-anchor-id="vanilla-gradient-descent">Vanilla Gradient Descent</h3>
 <p>In this first experiment, I tested to see that when <span class="math inline">\(p_dim = 2\)</span>, <span class="math inline">\(\alpha\)</span> is sufficiently small, and <span class="math inline">\(\beta = 0\)</span>, then the gradient descent for logistic regression converges to a weight vector <span class="math inline">\(\mathbf{w}\)</span> that looks visually correct. I showed this by plotting the decision boundary with the data and graphing the plot the loss over iterations.</p>
 <p>This code was provided by Phil in his assignment notes! This code creates classification data with noise.</p>
-<div id="cell-6" class="cell" data-execution_count="151">
+<div id="cell-7" class="cell" data-execution_count="151">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> classification_data(n_points <span class="op">=</span> <span class="dv">300</span>, noise <span class="op">=</span> <span class="fl">0.2</span>, p_dims <span class="op">=</span> <span class="dv">2</span>):</span>
@@ -272,7 +273,7 @@ window.Quarto = {
 </div>
 <p>The code below was taken from Phil’s class notes on perceptron. It was modified to adjust the target to be the y values of this data.</p>
 <p>This code creates the graph to show the classification_data through a graph. There are 300 points graphed where the x-axis (x_1) is a number you can measure and the y-axis (x_2) is another feature vector.</p>
-<div id="cell-8" class="cell" data-execution_count="152">
+<div id="cell-9" class="cell" data-execution_count="152">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> plot_classification_data(X, y, ax):</span>
@@ -297,7 +298,7 @@ window.Quarto = {
 </div>
 </div>
 <p>Now, to show the decision boundary, we draw the line by editing the code from the perceptron notes:</p>
-<div id="cell-10" class="cell" data-execution_count="153">
+<div id="cell-11" class="cell" data-execution_count="153">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> draw_line(w, x_min, x_max, ax, <span class="op">**</span>kwargs):</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    w_ <span class="op">=</span> w.flatten()</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> torch.linspace(x_min, x_max, <span class="dv">101</span>)</span>
@@ -321,7 +322,7 @@ window.Quarto = {
 </div>
 <p>As we can see, the line exactly separates the two classes.</p>
 <p>Next, I am plotting the loss over iterations, 5000 in my case, to show the loss decreasing monotonically. Part of the set-up code was provided in the assignment, but the code to keep track of the loss and the graph was created by me.</p>
-<div id="cell-13" class="cell" data-execution_count="154">
+<div id="cell-14" class="cell" data-execution_count="154">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>LR <span class="op">=</span> LogisticRegression()</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>opt <span class="op">=</span> GradientDescentOptimizer(LR)</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -352,7 +353,7 @@ window.Quarto = {
 <section id="benefits-of-momentum" class="level3">
 <h3 class="anchored" data-anchor-id="benefits-of-momentum">Benefits of Momentum</h3>
 <p>In this experiment, I used the same data that shows classification_data through a graph, but with momentum as the beta was increased to be 0.9.</p>
-<div id="cell-17" class="cell" data-execution_count="155">
+<div id="cell-18" class="cell" data-execution_count="155">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>LR <span class="op">=</span> LogisticRegression()</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>opt <span class="op">=</span> GradientDescentOptimizer(LR)</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -375,7 +376,7 @@ window.Quarto = {
 </div>
 </div>
 <p>To show the decision boundary, we draw the line by editing the code from the same perceptron notes where the line exactly separates the two classes:</p>
-<div id="cell-19" class="cell" data-execution_count="156">
+<div id="cell-20" class="cell" data-execution_count="156">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">1</span>)</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>plot_classification_data(X, y, ax)</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -392,7 +393,7 @@ window.Quarto = {
 </div>
 </div>
 <p>Next, I am plotting the loss over iterations, 300 in this case as seen in the first code block of this experiment, to show the loss decreasing monotonically. Part of the set-up code was provided in the assignment, but the code to keep track of the loss and the graph was created by me.</p>
-<div id="cell-21" class="cell" data-execution_count="157">
+<div id="cell-22" class="cell" data-execution_count="157">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>plt.plot(total_loss_m)</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>)</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Momentum Loss Over Iterations"</span>)</span>
@@ -410,7 +411,7 @@ window.Quarto = {
 </div>
 <p>As seen, the loss over iterations reaches a consistent flattening at around 50 iterations. Much quicker than Vanilla Gradient Descent!</p>
 <p>Next, I graphed the loss over iterations for each method, vanilla optimizer at a range of 6000 iterations while the momentum optimizer at 4000 iterations, to compare the two and see the speedup due to momentum:</p>
-<div id="cell-24" class="cell" data-execution_count="163">
+<div id="cell-25" class="cell" data-execution_count="163">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>LR <span class="op">=</span> LogisticRegression()</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>opt <span class="op">=</span> GradientDescentOptimizer(LR)</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -434,7 +435,7 @@ window.Quarto = {
 <span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>    opt.step(X, y, alpha <span class="op">=</span> <span class="fl">0.2</span>, beta <span class="op">=</span> <span class="fl">0.9</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-25" class="cell" data-execution_count="164">
+<div id="cell-26" class="cell" data-execution_count="164">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>plt.plot(total_loss, label<span class="op">=</span><span class="st">'Without Momentum'</span>, color <span class="op">=</span> <span class="st">'purple'</span>)</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>plt.plot(total_m_loss, label<span class="op">=</span><span class="st">'With Momentum'</span>, color <span class="op">=</span> <span class="st">'green'</span>)</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>)</span>
@@ -455,7 +456,7 @@ window.Quarto = {
 <section id="overfitting" class="level3">
 <h3 class="anchored" data-anchor-id="overfitting">Overfitting</h3>
 <p>In this experiment, I generate data where <code>p_dim &gt; n_points</code> as seen with <code>n_points = 50</code> and <code>p_dims = 100</code>. I do this twice, first on the dataset X_train, y_train and the second time on the dataset X_test, y_test. Then, I fit a logistic regression model to the data X_train, y_train where the goal was to obtain 100% accuracy on the training data, which is achieved as seen in the output.</p>
-<div id="cell-29" class="cell" data-execution_count="160">
+<div id="cell-30" class="cell" data-execution_count="160">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>X_train, y_train <span class="op">=</span> classification_data(n_points <span class="op">=</span> <span class="dv">50</span>, noise <span class="op">=</span> <span class="fl">0.6</span>, p_dims <span class="op">=</span> <span class="dv">100</span>)</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -488,7 +489,7 @@ window.Quarto = {
 </div>
 </div>
 <p>To show the change in loss during training, I graphed the loss over iterations with the values of the loss function at that iteration plotted. In the graph, we can see a decreasing trend, indicating that the model is improving its performance and converging towards an optimal solution.</p>
-<div id="cell-31" class="cell" data-execution_count="161">
+<div id="cell-32" class="cell" data-execution_count="161">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Plotting change in losses during training</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>plt.plot(<span class="bu">range</span>(<span class="bu">len</span>(losses)), losses, marker<span class="op">=</span><span class="st">'o'</span>, linestyle<span class="op">=</span><span class="st">'-'</span>)</span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Loss Over Iterations during Training'</span>)</span>
@@ -506,7 +507,7 @@ window.Quarto = {
 </div>
 </div>
 <p>Finally, I used the training model and ran it on the testing data where I got a lower accuracy rating. This shows the negative effects of overfitting a model on the training data.</p>
-<div id="cell-33" class="cell" data-execution_count="162">
+<div id="cell-34" class="cell" data-execution_count="162">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>X_test, y_test <span class="op">=</span> classification_data(n_points <span class="op">=</span> <span class="dv">50</span>, noise <span class="op">=</span> <span class="fl">0.6</span>, p_dims <span class="op">=</span> <span class="dv">100</span>)</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="co">#predicting</span></span>
