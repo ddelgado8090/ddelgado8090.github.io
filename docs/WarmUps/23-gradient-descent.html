@@ -590,33 +590,36 @@ g(\mathbf{w}_0 + \delta \mathbf{w}) = g(\mathbf{w}_0) + \langle \nabla g(\mathbf
 </div>
 <p>The method <code>model.grad()</code> is the challenging part of the implementation: this is where we actually need to turn <a href="#eq-logistic-gradient" class="quarto-xref">Equation&nbsp;4</a> into code.</p>
 <p>Here’s the complete training loop. This loop is <em>very</em> similar to our perceptron training loop – we’re just using a different loss and a different implementation of <code>grad</code>.</p>
-<div id="fig-lr-loss-iterations" class="cell quarto-figure quarto-figure-center quarto-float anchored page-columns page-full" data-fig-cap-location="margin">
+<div id="fig-lr-loss-iterations" class="cell quarto-figure quarto-figure-center quarto-float anchored page-columns page-full" data-fig-cap-location="margin" data-execution_count="1">
 <figure class="quarto-float quarto-float-fig figure page-columns page-full">
 <div aria-describedby="fig-lr-loss-iterations-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="sourceCode cell-code" id="fig-lr-loss-iterations" data-fig-cap-location="margin"><pre class="sourceCode python cell code-with-copy"><code class="sourceCode python"><span id="fig-lr-loss-iterations-1"><a href="#fig-lr-loss-iterations-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> hidden.logistic <span class="im">import</span> LogisticRegression, GradientDescentOptimizer</span>
-<span id="fig-lr-loss-iterations-2"><a href="#fig-lr-loss-iterations-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="fig-lr-loss-iterations-3"><a href="#fig-lr-loss-iterations-3" aria-hidden="true" tabindex="-1"></a><span class="co"># instantiate a model and an optimizer</span></span>
-<span id="fig-lr-loss-iterations-4"><a href="#fig-lr-loss-iterations-4" aria-hidden="true" tabindex="-1"></a>LR <span class="op">=</span> LogisticRegression() </span>
-<span id="fig-lr-loss-iterations-5"><a href="#fig-lr-loss-iterations-5" aria-hidden="true" tabindex="-1"></a>opt <span class="op">=</span> GradientDescentOptimizer(LR)</span>
-<span id="fig-lr-loss-iterations-6"><a href="#fig-lr-loss-iterations-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="fig-lr-loss-iterations-7"><a href="#fig-lr-loss-iterations-7" aria-hidden="true" tabindex="-1"></a><span class="co"># for keeping track of loss values</span></span>
-<span id="fig-lr-loss-iterations-8"><a href="#fig-lr-loss-iterations-8" aria-hidden="true" tabindex="-1"></a>loss_vec <span class="op">=</span> []</span>
-<span id="fig-lr-loss-iterations-9"><a href="#fig-lr-loss-iterations-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="fig-lr-loss-iterations-10"><a href="#fig-lr-loss-iterations-10" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">100</span>):</span>
-<span id="fig-lr-loss-iterations-11"><a href="#fig-lr-loss-iterations-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="fig-lr-loss-iterations-12"><a href="#fig-lr-loss-iterations-12" aria-hidden="true" tabindex="-1"></a>    <span class="co"># not part of the update: just for tracking our progress    </span></span>
-<span id="fig-lr-loss-iterations-13"><a href="#fig-lr-loss-iterations-13" aria-hidden="true" tabindex="-1"></a>    loss <span class="op">=</span> LR.loss(X, y) </span>
-<span id="fig-lr-loss-iterations-14"><a href="#fig-lr-loss-iterations-14" aria-hidden="true" tabindex="-1"></a>    loss_vec.append(loss)</span>
-<span id="fig-lr-loss-iterations-15"><a href="#fig-lr-loss-iterations-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="fig-lr-loss-iterations-16"><a href="#fig-lr-loss-iterations-16" aria-hidden="true" tabindex="-1"></a>    <span class="co"># only this line actually changes the parameter value</span></span>
-<span id="fig-lr-loss-iterations-17"><a href="#fig-lr-loss-iterations-17" aria-hidden="true" tabindex="-1"></a>    <span class="co"># The whole definition is: </span></span>
-<span id="fig-lr-loss-iterations-18"><a href="#fig-lr-loss-iterations-18" aria-hidden="true" tabindex="-1"></a>    <span class="co"># self.model.w -= lr*self.model.grad(X, y)</span></span>
-<span id="fig-lr-loss-iterations-19"><a href="#fig-lr-loss-iterations-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="fig-lr-loss-iterations-20"><a href="#fig-lr-loss-iterations-20" aria-hidden="true" tabindex="-1"></a>    opt.step(X, y, lr <span class="op">=</span> <span class="fl">0.02</span>)</span>
-<span id="fig-lr-loss-iterations-21"><a href="#fig-lr-loss-iterations-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="fig-lr-loss-iterations-22"><a href="#fig-lr-loss-iterations-22" aria-hidden="true" tabindex="-1"></a>plt.plot(torch.arange(<span class="dv">1</span>, <span class="bu">len</span>(loss_vec)<span class="op">+</span><span class="dv">1</span>), loss_vec, color <span class="op">=</span> <span class="st">"black"</span>)</span>
-<span id="fig-lr-loss-iterations-23"><a href="#fig-lr-loss-iterations-23" aria-hidden="true" tabindex="-1"></a>plt.semilogx()</span>
-<span id="fig-lr-loss-iterations-24"><a href="#fig-lr-loss-iterations-24" aria-hidden="true" tabindex="-1"></a>labs <span class="op">=</span> plt.gca().<span class="bu">set</span>(xlabel <span class="op">=</span> <span class="st">"Number of gradient descent iterations"</span>, ylabel <span class="op">=</span> <span class="st">"Loss (binary cross entropy)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> hidden.logistic <span class="im">import</span> LogisticRegression, GradientDescentOptimizer</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co"># instantiate a model and an optimizer</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>LR <span class="op">=</span> LogisticRegression() </span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>opt <span class="op">=</span> GradientDescentOptimizer(LR)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="co"># for keeping track of loss values</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>loss_vec <span class="op">=</span> []</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">100</span>):</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    <span class="co"># not part of the update: just for tracking our progress    </span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>    loss <span class="op">=</span> LR.loss(X, y) </span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>    loss_vec.append(loss)</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>    <span class="co"># only this line actually changes the parameter value</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>    <span class="co"># The whole definition is: </span></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>    <span class="co"># self.model.w -= lr*self.model.grad(X, y)</span></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>    opt.step(X, y, lr <span class="op">=</span> <span class="fl">0.02</span>)</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>plt.plot(torch.arange(<span class="dv">1</span>, <span class="bu">len</span>(loss_vec)<span class="op">+</span><span class="dv">1</span>), loss_vec, color <span class="op">=</span> <span class="st">"black"</span>)</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>plt.semilogx()</span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>labs <span class="op">=</span> plt.gca().<span class="bu">set</span>(xlabel <span class="op">=</span> <span class="st">"Number of gradient descent iterations"</span>, ylabel <span class="op">=</span> <span class="st">"Loss (binary cross entropy)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>ModuleNotFoundError: No module named 'hidden'</code></pre>
+</div>
 </div>
 <figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig quarto-uncaptioned margin-caption" id="fig-lr-loss-iterations-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1
@@ -626,7 +629,7 @@ Figure&nbsp;1
 <p>The loss quickly levels out to a constant value, which is our optimized weight vector <span class="math inline">\(\mathbf{w}\)</span>. Because our theory tells us that the loss function is convex, we know that the value of <span class="math inline">\(\mathbf{w}\)</span> we have found is the best possible, in the sense of minimizing the loss.</p>
 <p>Let’s check our training accuracy:</p>
 <div id="cell-13" class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>(<span class="fl">1.0</span><span class="op">*</span>(LR.predict(X) <span class="op">==</span> y)).mean()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>(<span class="fl">1.0</span><span class="op">*</span>(LR.predict(X) <span class="op">==</span> y)).mean()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Not too bad!</p>
 </section>
