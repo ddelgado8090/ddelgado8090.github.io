@@ -590,7 +590,7 @@ g(\mathbf{w}_0 + \delta \mathbf{w}) = g(\mathbf{w}_0) + \langle \nabla g(\mathbf
 </div>
 <p>The method <code>model.grad()</code> is the challenging part of the implementation: this is where we actually need to turn <a href="#eq-logistic-gradient" class="quarto-xref">Equation&nbsp;4</a> into code.</p>
 <p>Here’s the complete training loop. This loop is <em>very</em> similar to our perceptron training loop – we’re just using a different loss and a different implementation of <code>grad</code>.</p>
-<div id="fig-lr-loss-iterations" class="cell quarto-figure quarto-figure-center quarto-float anchored page-columns page-full" data-fig-cap-location="margin" data-execution_count="1">
+<div id="fig-lr-loss-iterations" class="cell quarto-figure quarto-figure-center quarto-float anchored page-columns page-full" data-execution_count="1" data-fig-cap-location="margin">
 <figure class="quarto-float quarto-float-fig figure page-columns page-full">
 <div aria-describedby="fig-lr-loss-iterations-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> hidden.logistic <span class="im">import</span> LogisticRegression, GradientDescentOptimizer</span>
