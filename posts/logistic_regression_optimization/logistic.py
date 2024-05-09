@@ -68,13 +68,13 @@ class LogisticRegression(LinearModel):
         """
         if self.w is None:
             #gives a random value to w
-            self.w = torch.rand((X.size()[1]))
+            #sigmas turning to one, which then log(1-1) is zero so gives infinity--> divide by X.size
+            self.w = torch.rand((X.size()[1]))/X.size()[1]
         s = X @ self.w
-        #sigmas turning to one, which then log(1-1) is zero so gives infinity--> look at only first 25 indices before the 1.0 starts
-        s = s[:25]
         sigma_s = 1 / (1 + torch.exp(-s))
-        logistic_loss = torch.mean(-y[:25] * torch.log(sigma_s) - (1 - y[:25]) * torch.log(1 - sigma_s))
+        logistic_loss = torch.mean(-y * torch.log(sigma_s) - (1 - y) * torch.log(1 - sigma_s))
         return logistic_loss
+    
     def grad(self, X, y):
         """
         Computes the gradient of the empirical risk L(w) using the gradient formula
