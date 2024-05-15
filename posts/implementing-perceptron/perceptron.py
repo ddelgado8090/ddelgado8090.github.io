@@ -83,8 +83,8 @@ class Perceptron(LinearModel):
         #making them column vectors to avoid shape errors
         s = s.reshape(-1,1)
         y = y.reshape(-1,1)
-
-        return torch.mean(((y * X) * (s * y < 0)), dim = 0)
+        alpha = 0.01
+        return alpha * torch.mean(((y * X) * (s * y < 0)), dim = 0)
 
 
 class PerceptronOptimizer:
